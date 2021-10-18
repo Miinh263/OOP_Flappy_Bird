@@ -8,7 +8,7 @@ const isProduction = process.env.NODE_ENV == "production";
 const stylesHandler = "style-loader";
 
 const config = {
-  entry: "./src/GameScene.ts",
+  entry: "./src/Game.ts",
 
   output: {
     path: path.resolve(__dirname, "dist"),
