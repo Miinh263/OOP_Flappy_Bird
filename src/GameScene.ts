@@ -1,6 +1,8 @@
 import { Pipe } from "./Pipe";
 import { Bird } from "./bird";
 export class GameScene {
+  private bird: Bird;
+  private pipes: Array<Pipe>;
   //
   create(bird: Bird) {
     var canvas = <HTMLCanvasElement>document.getElementById("bird");
@@ -14,6 +16,14 @@ export class GameScene {
     ctx.drawImage(backGround, 0, 0);
     ctx.drawImage(birdImage, bird.getX(), bird.getY());
     ctx.drawImage(play, bird.getX() - 90, bird.getY() + 70);
+  }
+  //
+  createBird(x: number, y: number, status: string): Bird {
+    return (this.bird = new Bird(x, y, status));
+  }
+  //
+  createPipes(): Array<Pipe> {
+    return (this.pipes = new Array<Pipe>());
   }
   //
   update(

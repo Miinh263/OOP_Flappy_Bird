@@ -16,9 +16,11 @@ above.src = "../src/images/ongtren.png";
 below.src = "../src/images/ongduoi.png";
 play.src = "../src/images/buttonplay.png";
 
-var bird = new Bird(400, 200, "live");
+var gameScene = new GameScene();
+
+var bird = gameScene.createBird(400, 200, "live");
 var pipe = new Pipe(canvas.width, 0);
-var pipes = new Array<Pipe>();
+var pipes = gameScene.createPipes();
 pipes[0] = pipe;
 
 var score = 0;
@@ -27,8 +29,6 @@ backGround.onload = function () {
   gameScene.create(bird);
 };
 //
-
-var gameScene = new GameScene();
 
 function loop(): void {
   gameScene.render(bird);

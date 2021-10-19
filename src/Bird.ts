@@ -25,6 +25,7 @@ export class Bird {
     this.y = y;
     this.status = status;
   }
+
   //bay lên
   flyUp(a: number): void {
     this.y -= a;
