@@ -26,7 +26,7 @@ pipes[0] = pipe;
 var score = 0;
 
 backGround.onload = function () {
-  gameScene.create(bird);
+  gameScene.create();
 };
 //
 
@@ -41,7 +41,7 @@ function loop(): void {
   requestAnimationFrame(loop);
 }
 
-document.onclick = function () {
+canvas.onclick = function () {
   loop();
 };
 

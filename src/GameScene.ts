@@ -4,7 +4,7 @@ export class GameScene {
   private bird: Bird;
   private pipes: Array<Pipe>;
   //
-  create(bird: Bird) {
+  create() {
     var canvas = <HTMLCanvasElement>document.getElementById("bird");
     var ctx = canvas.getContext("2d");
     var play = new Image();
@@ -14,8 +14,8 @@ export class GameScene {
     backGround.src = "../src/images/nenchinh.png";
     play.src = "../src/images/buttonplay.png";
     ctx.drawImage(backGround, 0, 0);
-    ctx.drawImage(birdImage, bird.getX(), bird.getY());
-    ctx.drawImage(play, bird.getX() - 90, bird.getY() + 70);
+    ctx.drawImage(birdImage, 400, 200);
+    ctx.drawImage(play, 310, 270);
   }
   //
   createBird(x: number, y: number, status: string): Bird {
