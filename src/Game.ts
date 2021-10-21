@@ -28,7 +28,6 @@ var score = 0;
 backGround.onload = function () {
   gameScene.create();
 };
-//
 
 function loop(): void {
   gameScene.render(bird);

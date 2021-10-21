@@ -64,6 +64,7 @@ export class GameScene {
           bird.setStatus("died");
           modal.style.display = "block";
           document.getElementById("score_game").innerHTML = "score : " + score;
+          score = 0;
         }
       }
 
@@ -72,6 +73,7 @@ export class GameScene {
           bird.setStatus("died");
           modal.style.display = "block";
           document.getElementById("score_game").innerHTML = "score : " + score;
+          score = 0;
         }
       }
 
@@ -80,6 +82,7 @@ export class GameScene {
           bird.setStatus("died");
           modal.style.display = "block";
           document.getElementById("score_game").innerHTML = "score : " + score;
+          score = 0;
         }
       }
     }
